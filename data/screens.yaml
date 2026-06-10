@@ -1,0 +1,31 @@
+screens:
+  - id: welcome
+    name: Welcome
+    description: "Animated avatar hero, feature overview, and onboarding flow."
+    phone: images/screenshots/welcome-phone.png
+    tablet: images/screenshots/welcome-tablet.png
+    desktop: images/screenshots/welcome-desktop.png
+  - id: home
+    name: Home
+    description: "Avatar card, weather, next event, and shortcuts to closet and stylist."
+    phone: images/screenshots/home-phone.png
+    tablet: images/screenshots/home-tablet.png
+    desktop: images/screenshots/home-desktop.png
+  - id: closet
+    name: Closet
+    description: "Responsive wardrobe grid with category filters and try-on badges."
+    phone: images/screenshots/closet-phone.png
+    tablet: images/screenshots/closet-tablet.png
+    desktop: images/screenshots/closet-desktop.png
+  - id: events
+    name: Events
+    description: "Calendar, live weather, and outfit planning for every occasion."
+    phone: images/screenshots/events-phone.png
+    tablet: images/screenshots/events-tablet.png
+    desktop: images/screenshots/events-desktop.png
+  - id: signin
+    name: Sign In
+    description: "Simple name entry to personalise your wardrobe locally."
+    phone: images/screenshots/signin-phone.png
+    tablet: images/screenshots/signin-tablet.png
+    desktop: images/screenshots/signin-desktop.png

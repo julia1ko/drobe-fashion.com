@@ -1,0 +1,7 @@
+{{/* Usage: partial "screenshot-device.html" (dict "src" "images/..." "alt" "..." "label" "Phone") */}}
+<figure class="device-shot">
+  <div class="device-frame">
+    <img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy" width="390" height="844">
+  </div>
+  {{ with .label }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

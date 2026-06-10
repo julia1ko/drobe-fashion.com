@@ -3,12 +3,9 @@
 
 {{ define "main" }}
 <main>
-  <!-- Cinematic hero -->
   <section class="cine-hero">
     <div class="cine-hero-bg">
-      <div class="img-placeholder cine-hero-placeholder" aria-label="Hero image placeholder">
-        <span>Campaign visual</span>
-      </div>
+      <img src="{{ "images/screenshots/welcome-desktop.png" | relURL }}" alt="" class="cine-hero-img" aria-hidden="true">
       <div class="cine-hero-overlay"></div>
     </div>
     <div class="cine-hero-content">
@@ -24,81 +21,78 @@
     <div class="cine-scroll" aria-hidden="true"><span>Scroll</span></div>
   </section>
 
-  <!-- Concept -->
   <section class="cine-section cine-concept">
     <div class="cine-section-inner">
       <p class="section-label">The concept</p>
       <h2>Your body. Your closet. Your rules.</h2>
       <div class="concept-grid">
         <div class="concept-copy">
-          <p>Most people own more clothes than they will ever wear — and every morning the same question returns: <em>what should I wear?</em> The problem is not the clothes. It is that we cannot see them, remember them, or imagine them on our bodies.</p>
-          <p>DROBE solves this with one core innovation: <strong>a 4D digital avatar that is an exact replica of your body</strong>. Every item you own lives in a virtual closet — digitised, organised, and always accessible. See your entire wardrobe on your avatar at once. Build outfits from what you actually own. When you need help, an AI stylist knows your body, your closet, and your taste.</p>
-          <p>When something no longer serves you, sell, trade, and discover independent makers — giving every garment a longer life.</p>
-          <p class="concept-closer">Not about buying more. About finally knowing what you have — and always knowing what to wear.</p>
+          <p>Most people own more clothes than they will ever wear, and every morning the same question returns: <em>what should I wear?</em> The problem is not the clothes. It is that we cannot see them, remember them, or imagine them on our bodies.</p>
+          <p>DROBE solves this with one core innovation: <strong>a 4D digital avatar that is an exact replica of your body</strong>. Every item you own lives in a virtual closet: digitised, organised, and always accessible. See your entire wardrobe on your avatar at once. Build outfits from what you actually own. When you need help, an AI stylist knows your body, your closet, and your taste.</p>
+          <p>When something no longer serves you, sell, trade, and discover independent makers, giving every garment a longer life.</p>
+          <p class="concept-closer">Not about buying more. About finally knowing what you have, and always knowing what to wear.</p>
         </div>
-        <div class="img-placeholder concept-visual" aria-label="Concept image placeholder">
-          <span>Editorial fashion visual</span>
-        </div>
+        <figure class="concept-visual-wrap">
+          <img src="{{ "images/screenshots/home-tablet.png" | relURL }}" alt="DROBE home screen on tablet" class="concept-visual" loading="lazy">
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- App screens -->
   <section class="cine-section cine-screens">
     <div class="cine-section-inner">
       <p class="section-label">The experience</p>
       <h2>Four screens. One wardrobe.</h2>
-      <p class="section-lead">From first launch to daily styling — designed for phone, tablet, and desktop.</p>
+      <p class="section-lead">From first launch to daily styling, designed for phone, tablet, and desktop.</p>
       <div class="screen-grid">
-        {{ range (slice "Welcome" "Home" "Closet" "Events") }}
-        <div class="screen-card">
-          <div class="img-placeholder screen-placeholder" aria-label="{{ . }} screen placeholder">
-            <span>{{ . }}</span>
+        {{ range first 4 site.Data.screens.screens }}
+        <article class="screen-card">
+          <div class="device-frame device-frame-sm">
+            <img src="{{ .phone | relURL }}" alt="{{ .name }} screen" loading="lazy">
           </div>
-          <p class="screen-label">{{ . }}</p>
-        </div>
+          <h3 class="screen-label">{{ .name }}</h3>
+          <p class="screen-desc">{{ .description }}</p>
+        </article>
         {{ end }}
       </div>
     </div>
   </section>
 
-  <!-- Pillars -->
   <section class="cine-section cine-pillars">
     <div class="cine-section-inner">
       <p class="section-label">Why DROBE</p>
       <h2>Everything your wardrobe needs.</h2>
       <div class="pillar-grid">
         <article class="pillar-card">
-          <div class="pillar-icon">01</div>
+          <div class="pillar-icon-wrap">{{ partial "icon.html" (dict "name" "user" "size" 22) }}</div>
           <h3>4D Avatar</h3>
-          <p>An exact digital replica of your body — proportions, skin tone, and shape. The foundation every feature builds on.</p>
+          <p>An exact digital replica of your body: proportions, skin tone, and shape. The foundation every feature builds on.</p>
         </article>
         <article class="pillar-card">
-          <div class="pillar-icon">02</div>
+          <div class="pillar-icon-wrap">{{ partial "icon.html" (dict "name" "hanger" "size" 22) }}</div>
           <h3>Virtual Closet</h3>
           <p>Every piece photographed, categorised, and organised. Scan new items in seconds. Nothing forgotten.</p>
         </article>
         <article class="pillar-card">
-          <div class="pillar-icon">03</div>
+          <div class="pillar-icon-wrap">{{ partial "icon.html" (dict "name" "sparkle" "size" 22) }}</div>
           <h3>AI Stylist</h3>
-          <p>Personal outfit suggestions for your day, event, or mood — only when you ask. Always available, never judging.</p>
+          <p>Personal outfit suggestions for your day, event, or mood, only when you ask. Always available, never judging.</p>
         </article>
         <article class="pillar-card">
-          <div class="pillar-icon">04</div>
+          <div class="pillar-icon-wrap">{{ partial "icon.html" (dict "name" "shop" "size" 22) }}</div>
           <h3>Marketplace</h3>
-          <p>Sell, trade, and try on pieces from peers and independent makers — on your avatar, before you commit.</p>
+          <p>Sell, trade, and try on pieces from peers and independent makers on your avatar, before you commit.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Comparison teaser -->
   <section class="cine-section cine-compare-teaser">
     <div class="cine-section-inner cine-compare-inner">
       <div>
         <p class="section-label">Competitive edge</p>
         <h2>The only product that does it all.</h2>
-        <p class="section-lead">Every competitor does one or two things well. Nobody has built the full vision — until now.</p>
+        <p class="section-lead">Every competitor does one or two things well. Nobody has built the full vision until now.</p>
         <a href="{{ "compare/" | relURL }}" class="btn btn-primary">View full comparison</a>
       </div>
       <div class="teaser-stats">
@@ -109,7 +103,6 @@
     </div>
   </section>
 
-  <!-- Roadmap teaser -->
   <section class="cine-section cine-roadmap-teaser">
     <div class="cine-section-inner">
       <p class="section-label">Roadmap</p>
@@ -127,12 +120,11 @@
     </div>
   </section>
 
-  <!-- Final CTA -->
   <section class="cine-section cine-final-cta">
     <div class="cine-section-inner cine-final-inner">
-      <div class="img-placeholder cine-cta-visual" aria-label="Brand visual placeholder">
-        <span>Brand campaign</span>
-      </div>
+      <figure class="cine-cta-visual-wrap">
+        <img src="{{ "images/screenshots/closet-desktop.png" | relURL }}" alt="DROBE closet on desktop" class="cine-cta-visual" loading="lazy">
+      </figure>
       <div>
         <h2>Ready to see it in action?</h2>
         <p>Explore the interactive product demo and the full feature breakdown.</p>

@@ -1,4 +1,4 @@
 ---
 title: "Roadmap"
-description: "From MVP to full ecosystem — product timeline and technology stack."
+description: "From MVP to full ecosystem. Product timeline and technology stack."
 ---

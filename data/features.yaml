@@ -1,56 +1,81 @@
-closet:
-  title: Virtual Closet
-  groups:
-    - name: Avatar
-      items:
-        - "4D digital replica of your exact body — your proportions, your skin tone, your shape"
-        - "Generated from your own photos or manual measurements"
-        - "Updated anytime your body changes"
-        - "The foundation every other feature is built on"
-    - name: Wardrobe
-      items:
-        - "Every item you own photographed, categorised, and organised in one place"
-        - "Scan new pieces in seconds using your camera"
-        - "See your entire wardrobe on your avatar at once"
-        - "Nothing buried, nothing forgotten, nothing wasted"
-    - name: Outfits
-      items:
-        - "Build and visualise complete looks directly on your avatar"
-        - "Save outfits and name them for any occasion"
-        - "Plan your week ahead from clothes you actually own"
-        - "See combinations you never thought of"
-    - name: AI Stylist
-      items:
-        - "Knows your body, your wardrobe, and your personal taste"
-        - "Suggests outfits for your day, your event, your mood — only when asked"
-        - "Learns and improves the more you use her"
-        - "A personal stylist that is always available and never judges"
-    - name: Planning
-      items:
-        - "Connect your calendar and plan outfits around your events and schedule"
-        - "Weather-aware suggestions so you are always dressed for the day"
-        - "Never caught off guard by a forgotten dinner or last-minute meeting"
-        - "Know what you are wearing before the morning begins"
-    - name: Sustainability
-      items:
-        - "Track exactly how often each piece gets worn"
-        - "Get gentle nudges about forgotten items in your wardrobe"
-        - "Donate, recycle, or relist with a single tap"
-        - "See the real environmental impact of your choices over time"
+sections:
+  - id: closet
+    title: Virtual Closet
+    groups:
+      - name: Avatar
+        icon: user
+        screenshot: images/screenshots/welcome-phone.png
+        summary: "A 4D digital replica of your exact body: proportions, skin tone, and shape."
+        items:
+          - "Generated from your own photos or manual measurements in minutes"
+          - "Updated anytime your body changes, so fits always look right"
+          - "Powers every try-on, outfit preview, and stylist recommendation"
+          - "The foundation every other feature in DROBE is built on"
+      - name: Wardrobe
+        icon: hanger
+        screenshot: images/screenshots/closet-phone.png
+        summary: "Every item you own, photographed, categorised, and always with you."
+        items:
+          - "Scan new pieces in seconds with your camera. No manual typing"
+          - "Filter by category: tops, trousers, dresses, outerwear, shoes, accessories"
+          - "See your entire wardrobe on your avatar at once"
+          - "47+ demo items included in the prototype. Unlimited in the full product"
+      - name: Outfits
+        icon: layers
+        screenshot: images/screenshots/closet-tablet.png
+        summary: "Build, name, and save complete looks on your avatar."
+        items:
+          - "Visualise combinations from clothes you actually own"
+          - "Save outfits and name them for work, weekends, or special events"
+          - "Plan your week ahead without opening your physical closet"
+          - "Discover pairings you never thought to try"
+      - name: AI Stylist
+        icon: sparkle
+        screenshot: images/screenshots/home-phone.png
+        summary: "A personal stylist that knows your body, closet, and taste."
+        items:
+          - "Suggests outfits for your day, event, or mood. Only when you ask"
+          - "Factors in weather, calendar, and what you have worn recently"
+          - "Learns and improves the more you use her"
+          - "Always available, never judging, never pushing you to buy more"
+      - name: Planning
+        icon: calendar
+        screenshot: images/screenshots/events-phone.png
+        summary: "Connect your schedule and dress for every occasion with confidence."
+        items:
+          - "Link calendar events and assign outfits ahead of time"
+          - "Weather-aware suggestions so you are never underdressed or overheating"
+          - "Dress codes, travel days, and last-minute meetings covered"
+          - "Know what you are wearing before the morning begins"
+      - name: Sustainability
+        icon: leaf
+        screenshot: images/screenshots/events-tablet.png
+        summary: "Wear more of what you own. Waste less. See your impact over time."
+        items:
+          - "Track exactly how often each piece gets worn"
+          - "Gentle nudges about forgotten items buried in your closet"
+          - "Donate, recycle, or relist with a single tap"
+          - "CO₂ savings and circular fashion metrics over time"
 
-marketplace:
-  title: Marketplace
-  groups:
-    - name: Sell & Trade
-      items:
-        - "List what no longer serves you in seconds"
-        - "Sell directly or trade with people whose taste you trust"
-        - "No middleman, no hassle, clothes finding new homes"
-        - "Every transaction handled securely in the app"
-        - "A dedicated space for small designers and independent creators"
-        - "Support the people behind the clothes, not just the clothes"
-    - name: Try On
-      items:
-        - "Try any marketplace item on your own avatar before committing"
-        - "Connect external retailers and try their pieces the same way"
-        - "See exactly how it looks on your body"
+  - id: marketplace
+    title: Marketplace
+    groups:
+      - name: Sell & Trade
+        icon: shop
+        screenshot: images/screenshots/closet-desktop.png
+        summary: "Give every garment a longer life inside a trusted community."
+        items:
+          - "List what no longer serves you in seconds from your digital closet"
+          - "Sell directly or trade with people whose taste you trust"
+          - "No middleman, no hassle. Secure in-app transactions"
+          - "Dedicated storefronts for small designers and independent makers"
+          - "Support the people behind the clothes, not just the clothes"
+      - name: Try On
+        icon: scan
+        screenshot: images/screenshots/home-tablet.png
+        summary: "See it on your body before you buy, from peers or retailers."
+        items:
+          - "Try any marketplace item on your own avatar before committing"
+          - "Connect external retailers and preview their pieces the same way"
+          - "Reduce returns and buyer regret with a true fit preview"
+          - "The only wardrobe app that closes the loop from closet to shop"

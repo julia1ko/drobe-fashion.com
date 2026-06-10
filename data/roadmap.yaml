@@ -1,40 +1,40 @@
 phases:
   - id: mvp
     symbol: "◆"
-    title: MVP — Core Product
+    title: "MVP: Core Product"
     subtitle: The foundation. Without this, it is not this app.
     tagline: Four features. One product. Never built like this before.
     items:
-      - "Avatar generated from your own body photos — 4D, personal, unique"
-      - "Digital closet — scan and digitise real clothing"
-      - "Clothing on your avatar — see your wardrobe on your body"
-      - "AI stylist — knows your body, closet, and personal style"
+      - "Avatar generated from your own body photos: 4D, personal, unique"
+      - "Digital closet: scan and digitise real clothing"
+      - "Clothing on your avatar: see your wardrobe on your body"
+      - "AI stylist: knows your body, closet, and personal style"
   - id: v2
     symbol: "◇"
-    title: Version 2 — Daily Value
+    title: "Version 2: Daily Value"
     subtitle: Make the core useful every single day.
     tagline: The core works without these. They make it worth opening daily.
     items:
-      - "Calendar — plan outfits across days and weeks"
-      - "Event planner — what to wear, when, for every occasion"
-      - "Weather integration — outfit suggestions based on the forecast"
-      - "Sustainability tracker — wear count, CO₂ savings, donated or recycled items"
+      - "Calendar: plan outfits across days and weeks"
+      - "Event planner: what to wear, when, for every occasion"
+      - "Weather integration: outfit suggestions based on the forecast"
+      - "Sustainability tracker: wear count, CO₂ savings, donated or recycled items"
   - id: v3
     symbol: "◈"
-    title: Version 3 — Full Ecosystem
+    title: "Version 3: Full Ecosystem"
     subtitle: The complete app ecosystem.
     tagline: The marketplace layer. Buy, sell, trade, discover.
     items:
-      - "Shop — peer-to-peer marketplace to buy, sell, and trade"
-      - "Try-on — every shop item on your avatar before you buy"
-      - "Trade flow — offer your own pieces as swap for listings"
-      - "Indie maker profiles — independent creators with their own storefront"
+      - "Shop: peer-to-peer marketplace to buy, sell, and trade"
+      - "Try-on: every shop item on your avatar before you buy"
+      - "Trade flow: offer your own pieces as swap for listings"
+      - "Indie maker profiles: independent creators with their own storefront"
 
 tech:
   frontend:
-    - "JavaScript / React Native — iOS and Android"
+    - "JavaScript / React Native for iOS and Android"
   backend:
-    - "JavaScript / Node.js — server, API, and app-to-database communication"
-    - "Python — AI integration and avatar generation"
-    - "SQL — database"
-    - "Stripe Connect — marketplace payments and commission splits"
+    - "JavaScript / Node.js for server, API, and app-to-database communication"
+    - "Python for AI integration and avatar generation"
+    - "SQL database"
+    - "Stripe Connect for marketplace payments and commission splits"

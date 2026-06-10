@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Start local dev server (downloads Hugo automatically on first run)
+exec "$(dirname "$0")/scripts/serve.sh" "$@"

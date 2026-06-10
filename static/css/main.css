@@ -1,4 +1,4 @@
-/* DROBE — shared design system */
+/* DROBE shared design system */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -193,6 +193,12 @@ body.inner main {
 }
 
 .btn-ghost:hover { opacity: 1; }
+
+/* ── Icons ───────────────────────────────────────────────────── */
+.icon {
+  display: block;
+  flex-shrink: 0;
+}
 
 /* ── Image placeholders ──────────────────────────────────────── */
 .img-placeholder {

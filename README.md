@@ -20,21 +20,27 @@ Not about buying more. About finally knowing what you have, and always knowing w
 
 ## Local development
 
-No Homebrew required. The repo includes scripts that download Hugo automatically on first run:
+**You do not need Homebrew or a global Hugo install.** The repo downloads Hugo into `.bin/` on first run.
+
+From the project folder:
 
 ```bash
-./scripts/serve.sh
-# Opens at http://localhost:1313
+cd /Users/juliakoberl/code/drobe-fashion.com
+./dev
 ```
+
+Opens at **http://localhost:1313**
 
 Build for production:
 
 ```bash
-./scripts/build.sh
+./build
 # Output in public/
 ```
 
-If you already have Hugo installed globally, you can also run `hugo server -D` directly.
+Equivalent commands: `./scripts/serve.sh` and `./scripts/build.sh`
+
+> Do not run `hugo` directly — it is not on your PATH. Always use `./dev` or `./scripts/serve.sh`.
 
 ---
 

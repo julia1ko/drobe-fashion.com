@@ -1,4 +1,4 @@
 ---
 title: "Product"
-description: "Your wardrobe, reimagined — the DROBE app experience."
+description: "Your wardrobe, reimagined. The DROBE app experience and current demo."
 ---

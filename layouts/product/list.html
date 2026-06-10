@@ -6,40 +6,33 @@
   <header class="page-header">
     <p class="section-label">Product</p>
     <h1>Your wardrobe,<br>reimagined.</h1>
-    <p class="page-lead">A personal stylist that lives on your phone. Photograph your clothes, get smart outfit suggestions, and plan every look ahead of time.</p>
+    <p class="page-lead">A personal stylist that lives on your phone. Photograph your clothes, get smart outfit suggestions, and plan every look ahead of time. The current demo runs locally on your device with no account required.</p>
   </header>
 
   <section class="product-hero">
     <div class="hero-media" id="hero-media">
-      <img src="{{ "images/avatar.png" | relURL }}" alt="DROBE avatar — your digital body replica" class="hero-layer hero-avatar" id="hero-avatar">
+      <img src="{{ "images/avatar.png" | relURL }}" alt="DROBE avatar, your digital body replica" class="hero-layer hero-avatar" id="hero-avatar">
       <img src="{{ "images/avatar-animated.gif" | relURL }}" alt="" class="hero-layer hero-gif is-visible" id="hero-gif" aria-hidden="true">
     </div>
 
     <div class="hero-content">
+      <h2 class="product-subhead">What the demo includes today</h2>
       <ul class="features">
         <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          </span>
-          <span class="feature-text"><strong>Photograph your wardrobe</strong><span>Scan items with your camera — no typing needed.</span></span>
+          <span class="feature-icon">{{ partial "icon.html" (dict "name" "camera" "size" 20) }}</span>
+          <span class="feature-text"><strong>Photograph your wardrobe</strong><span>Scan items with your camera. No typing needed. Add new pieces from the closet screen.</span></span>
         </li>
         <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.73V8l7 5H4l7-5V6.73A2 2 0 0 1 12 3z"/><path d="M3 13h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7z"/></svg>
-          </span>
-          <span class="feature-text"><strong>Build your digital closet</strong><span>Every piece, organised and always with you.</span></span>
+          <span class="feature-icon">{{ partial "icon.html" (dict "name" "hanger" "size" 20) }}</span>
+          <span class="feature-text"><strong>Build your digital closet</strong><span>47 demo garments across all categories. Responsive grid on phone, tablet, and desktop.</span></span>
         </li>
         <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/></svg>
-          </span>
-          <span class="feature-text"><strong>AI outfit suggestions</strong><span>Smart picks based on your style and the weather.</span></span>
+          <span class="feature-icon">{{ partial "icon.html" (dict "name" "sparkle" "size" 20) }}</span>
+          <span class="feature-text"><strong>AI outfit suggestions</strong><span>Smart picks based on your style and the weather. Stylist shortcut from the home screen.</span></span>
         </li>
         <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          </span>
-          <span class="feature-text"><strong>Plan ahead for events</strong><span>Never stress about what to wear again.</span></span>
+          <span class="feature-icon">{{ partial "icon.html" (dict "name" "calendar" "size" 20) }}</span>
+          <span class="feature-text"><strong>Plan ahead for events</strong><span>Live weather, navigable calendar, and event cards with dress codes.</span></span>
         </li>
       </ul>
 
@@ -47,10 +40,58 @@
         <span class="chip chip-green">4D avatar</span>
         <span class="chip chip-green">Virtual closet</span>
         <span class="chip">AI stylist</span>
-        <span class="chip">Marketplace</span>
+        <span class="chip">Local &amp; private</span>
       </div>
 
       <p class="tagline">{{ .Site.Params.tagline }}</p>
+    </div>
+  </section>
+
+  <section class="product-screens">
+    <header class="section-header">
+      <p class="section-label">Screens</p>
+      <h2>Built for every screen size.</h2>
+      <p class="section-lead">Five core screens, each responsive across phone, tablet, and desktop breakpoints.</p>
+    </header>
+
+    {{ range site.Data.screens.screens }}
+    <article class="screen-showcase" id="screen-{{ .id }}">
+      <div class="screen-showcase-copy">
+        <h3>{{ .name }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      <div class="screen-showcase-devices">
+        <figure class="device-shot">
+          <div class="device-frame device-frame-sm">
+            <img src="{{ .phone | relURL }}" alt="{{ .name }} on phone" loading="lazy">
+          </div>
+          <figcaption>Phone</figcaption>
+        </figure>
+        <figure class="device-shot device-shot-hide-mobile">
+          <div class="device-frame device-frame-md">
+            <img src="{{ .tablet | relURL }}" alt="{{ .name }} on tablet" loading="lazy">
+          </div>
+          <figcaption>Tablet</figcaption>
+        </figure>
+        <figure class="device-shot device-shot-hide-mobile">
+          <div class="device-frame device-frame-lg">
+            <img src="{{ .desktop | relURL }}" alt="{{ .name }} on desktop" loading="lazy">
+          </div>
+          <figcaption>Desktop</figcaption>
+        </figure>
+      </div>
+    </article>
+    {{ end }}
+  </section>
+
+  <section class="product-demo-note">
+    <div class="demo-note-card">
+      {{ partial "icon.html" (dict "name" "scan" "size" 24) }}
+      <div>
+        <h3>Try the live demo</h3>
+        <p>The open-source prototype runs on iOS, Android, and web via Expo. All data stays on your device.</p>
+        <a href="https://github.com/julia1ko/drobe-demo" class="btn btn-primary" target="_blank" rel="noopener">Open drobe-demo on GitHub</a>
+      </div>
     </div>
   </section>
 </main>

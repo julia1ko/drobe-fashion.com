@@ -6,15 +6,13 @@
   <header class="page-header">
     <p class="section-label">Business model</p>
     <h1>Built to scale.</h1>
-    <p class="page-lead">Freemium growth, premium conversion, and marketplace revenue — three streams that reinforce each other.</p>
+    <p class="page-lead">Freemium growth, premium conversion, and marketplace revenue: three streams that reinforce each other.</p>
   </header>
 
   <div class="business-grid">
     {{ range site.Data.business.models }}
     <article class="business-card">
-      <div class="img-placeholder business-visual" aria-label="{{ .title }} placeholder">
-        <span>Visual</span>
-      </div>
+      <div class="business-icon">{{ partial "icon.html" (dict "name" .icon "size" 28) }}</div>
       <h2>{{ .title }}</h2>
       <p>{{ .description }}</p>
     </article>

@@ -1,0 +1,10 @@
+{
+  "name": "drobe-fashion.com",
+  "private": true,
+  "scripts": {
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}

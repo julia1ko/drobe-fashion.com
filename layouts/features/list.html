@@ -6,21 +6,26 @@
   <header class="page-header">
     <p class="section-label">Features</p>
     <h1>Everything your wardrobe needs.</h1>
-    <p class="page-lead">Virtual closet, AI styling, planning, sustainability, and a marketplace — built on your 4D avatar.</p>
+    <p class="page-lead">Virtual closet, AI styling, planning, sustainability, and a marketplace, all built on your 4D avatar.</p>
   </header>
 
-  {{ $data := site.Data.features }}
-  {{ range $key, $section := $data }}
+  {{ range site.Data.features.sections }}
   <section class="feature-section">
-    <h2 class="feature-section-title">{{ $section.title }}</h2>
+    <h2 class="feature-section-title">{{ .title }}</h2>
     <div class="feature-groups">
-      {{ range $section.groups }}
+      {{ range .groups }}
       <article class="feature-group-card">
-        <div class="img-placeholder feature-group-visual" aria-label="{{ .name }} placeholder">
-          <span>{{ .name }}</span>
-        </div>
+        <figure class="feature-group-visual-wrap">
+          <div class="device-frame device-frame-sm">
+            <img src="{{ .screenshot | relURL }}" alt="{{ .name }} in DROBE app" loading="lazy">
+          </div>
+        </figure>
         <div class="feature-group-body">
-          <h3>{{ .name }}</h3>
+          <div class="feature-group-head">
+            <span class="feature-group-icon">{{ partial "icon.html" (dict "name" .icon "size" 22) }}</span>
+            <h3>{{ .name }}</h3>
+          </div>
+          <p class="feature-summary">{{ .summary }}</p>
           <ul>
             {{ range .items }}
             <li>{{ . }}</li>
