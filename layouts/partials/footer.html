@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">DROBE</span>
+      <p class="footer-tagline">{{ .Site.Params.tagline }}</p>
+    </div>
+    <nav class="footer-nav">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <p class="footer-copy">Not about buying more. About knowing what you have, and always knowing what to wear.</p>
+    <p class="footer-meta">&copy; {{ now.Year }} DROBE</p>
+  </div>
+</footer>

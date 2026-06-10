@@ -1,0 +1,38 @@
+{{ define "bodyclass" }}inner{{ end }}
+{{ define "head" }}<link rel="stylesheet" href="{{ "css/pages.css" | relURL }}">{{ end }}
+
+{{ define "main" }}
+<main class="page-wrap">
+  <header class="page-header">
+    <p class="section-label">Features</p>
+    <h1>Everything your wardrobe needs.</h1>
+    <p class="page-lead">Virtual closet, AI styling, planning, sustainability, and a marketplace — built on your 4D avatar.</p>
+  </header>
+
+  {{ $data := site.Data.features }}
+  {{ range $key, $section := $data }}
+  <section class="feature-section">
+    <h2 class="feature-section-title">{{ $section.title }}</h2>
+    <div class="feature-groups">
+      {{ range $section.groups }}
+      <article class="feature-group-card">
+        <div class="img-placeholder feature-group-visual" aria-label="{{ .name }} placeholder">
+          <span>{{ .name }}</span>
+        </div>
+        <div class="feature-group-body">
+          <h3>{{ .name }}</h3>
+          <ul>
+            {{ range .items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</main>
+{{ end }}
+
+{{ define "scripts" }}<script src="{{ "js/nav.js" | relURL }}" defer></script>{{ end }}

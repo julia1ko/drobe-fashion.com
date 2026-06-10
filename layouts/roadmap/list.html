@@ -1,0 +1,57 @@
+{{ define "bodyclass" }}inner{{ end }}
+{{ define "head" }}<link rel="stylesheet" href="{{ "css/pages.css" | relURL }}">{{ end }}
+
+{{ define "main" }}
+<main class="page-wrap">
+  <header class="page-header">
+    <p class="section-label">Roadmap</p>
+    <h1>Timeline &amp; next steps</h1>
+    <p class="page-lead">Each version is a complete, shippable product. Version 2 adds on top of Version 1. Version 3 completes the ecosystem.</p>
+  </header>
+
+  <div class="roadmap-timeline">
+    {{ range site.Data.roadmap.phases }}
+    <article class="roadmap-phase">
+      <div class="roadmap-phase-head">
+        <span class="roadmap-symbol">{{ .symbol }}</span>
+        <div>
+          <h2>{{ .title }}</h2>
+          <p class="roadmap-subtitle">{{ .subtitle }}</p>
+          <p class="roadmap-tagline">{{ .tagline }}</p>
+        </div>
+      </div>
+      <ul class="roadmap-items">
+        {{ range .items }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </article>
+    {{ end }}
+  </div>
+
+  <section class="tech-section">
+    <p class="section-label">Technology</p>
+    <h2>Stack &amp; languages</h2>
+    <div class="tech-grid">
+      <div class="tech-col">
+        <h3>Frontend</h3>
+        <ul>
+          {{ range site.Data.roadmap.tech.frontend }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="tech-col">
+        <h3>Backend &amp; infrastructure</h3>
+        <ul>
+          {{ range site.Data.roadmap.tech.backend }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}
+
+{{ define "scripts" }}<script src="{{ "js/nav.js" | relURL }}" defer></script>{{ end }}

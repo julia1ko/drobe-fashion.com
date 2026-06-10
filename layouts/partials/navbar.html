@@ -1,0 +1,16 @@
+<header class="nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="{{ "/" | relURL }}" class="nav-logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">DROBE</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}" class="nav-link{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} is-active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

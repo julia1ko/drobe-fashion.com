@@ -1,0 +1,49 @@
+{{ define "bodyclass" }}inner{{ end }}
+{{ define "head" }}<link rel="stylesheet" href="{{ "css/pages.css" | relURL }}">{{ end }}
+
+{{ define "main" }}
+{{ $data := site.Data.competitors }}
+<main class="page-wrap">
+  <header class="page-header">
+    <p class="section-label">Compare</p>
+    <h1>Feature matrix</h1>
+    <p class="page-lead">Every competitor does one or two things well. Nobody has built the full vision — until now.</p>
+  </header>
+
+  <div class="compare-legend">
+    <span><strong class="mark-yes">✓</strong> {{ $data.legend.yes }}</span>
+    <span><strong class="mark-partial">~</strong> {{ $data.legend.partial }}</span>
+    <span><strong class="mark-no">✗</strong> {{ $data.legend.no }}</span>
+  </div>
+
+  <div class="table-scroll">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          {{ range $data.competitors }}
+          <th{{ if .highlight }} class="highlight-col"{{ end }}>{{ .name }}</th>
+          {{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $data.features }}
+        <tr>
+          <td>{{ .label }}</td>
+          {{ range $i, $val := .values }}
+          {{ $comp := index $data.competitors $i }}
+          <td{{ if $comp.highlight }} class="highlight-col"{{ end }}>
+            {{ if eq $val "yes" }}<span class="mark-yes">✓</span>
+            {{ else if eq $val "partial" }}<span class="mark-partial">~</span>
+            {{ else }}<span class="mark-no">✗</span>{{ end }}
+          </td>
+          {{ end }}
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</main>
+{{ end }}
+
+{{ define "scripts" }}<script src="{{ "js/nav.js" | relURL }}" defer></script>{{ end }}

@@ -1,0 +1,56 @@
+closet:
+  title: Virtual Closet
+  groups:
+    - name: Avatar
+      items:
+        - "4D digital replica of your exact body — your proportions, your skin tone, your shape"
+        - "Generated from your own photos or manual measurements"
+        - "Updated anytime your body changes"
+        - "The foundation every other feature is built on"
+    - name: Wardrobe
+      items:
+        - "Every item you own photographed, categorised, and organised in one place"
+        - "Scan new pieces in seconds using your camera"
+        - "See your entire wardrobe on your avatar at once"
+        - "Nothing buried, nothing forgotten, nothing wasted"
+    - name: Outfits
+      items:
+        - "Build and visualise complete looks directly on your avatar"
+        - "Save outfits and name them for any occasion"
+        - "Plan your week ahead from clothes you actually own"
+        - "See combinations you never thought of"
+    - name: AI Stylist
+      items:
+        - "Knows your body, your wardrobe, and your personal taste"
+        - "Suggests outfits for your day, your event, your mood — only when asked"
+        - "Learns and improves the more you use her"
+        - "A personal stylist that is always available and never judges"
+    - name: Planning
+      items:
+        - "Connect your calendar and plan outfits around your events and schedule"
+        - "Weather-aware suggestions so you are always dressed for the day"
+        - "Never caught off guard by a forgotten dinner or last-minute meeting"
+        - "Know what you are wearing before the morning begins"
+    - name: Sustainability
+      items:
+        - "Track exactly how often each piece gets worn"
+        - "Get gentle nudges about forgotten items in your wardrobe"
+        - "Donate, recycle, or relist with a single tap"
+        - "See the real environmental impact of your choices over time"
+
+marketplace:
+  title: Marketplace
+  groups:
+    - name: Sell & Trade
+      items:
+        - "List what no longer serves you in seconds"
+        - "Sell directly or trade with people whose taste you trust"
+        - "No middleman, no hassle, clothes finding new homes"
+        - "Every transaction handled securely in the app"
+        - "A dedicated space for small designers and independent creators"
+        - "Support the people behind the clothes, not just the clothes"
+    - name: Try On
+      items:
+        - "Try any marketplace item on your own avatar before committing"
+        - "Connect external retailers and try their pieces the same way"
+        - "See exactly how it looks on your body"

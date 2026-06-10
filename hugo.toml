@@ -9,6 +9,31 @@ disableKinds = ["taxonomy", "term"]
   description = "Your body. Your closet. Your rules. A virtual wardrobe built around a 4D digital avatar of your body."
   tagline = "Your body. Your closet. Your rules."
 
+[[menu.main]]
+  name = "Product"
+  url = "/product/"
+  weight = 1
+
+[[menu.main]]
+  name = "Features"
+  url = "/features/"
+  weight = 2
+
+[[menu.main]]
+  name = "Compare"
+  url = "/compare/"
+  weight = 3
+
+[[menu.main]]
+  name = "Business"
+  url = "/business/"
+  weight = 4
+
+[[menu.main]]
+  name = "Roadmap"
+  url = "/roadmap/"
+  weight = 5
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

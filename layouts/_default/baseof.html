@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ if .IsHome }}{{ .Site.Title }} — Your wardrobe, reimagined{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Site.Params.description }}">
+  <title>{{ if .IsHome }}{{ .Site.Title }} — Fashion, reimagined{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+  {{ block "head" . }}{{ end }}
 </head>
-<body>
+<body class="{{ block "bodyclass" . }}site{{ end }}">
+  {{ partial "navbar.html" . }}
   {{ block "main" . }}{{ end }}
+  {{ partial "footer.html" . }}
+  {{ block "scripts" . }}{{ end }}
 </body>
 </html>

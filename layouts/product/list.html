@@ -1,0 +1,62 @@
+{{ define "bodyclass" }}inner product-page{{ end }}
+{{ define "head" }}<link rel="stylesheet" href="{{ "css/pages.css" | relURL }}"><link rel="stylesheet" href="{{ "css/product.css" | relURL }}">{{ end }}
+
+{{ define "main" }}
+<main class="page-wrap">
+  <header class="page-header">
+    <p class="section-label">Product</p>
+    <h1>Your wardrobe,<br>reimagined.</h1>
+    <p class="page-lead">A personal stylist that lives on your phone. Photograph your clothes, get smart outfit suggestions, and plan every look ahead of time.</p>
+  </header>
+
+  <section class="product-hero">
+    <div class="hero-media" id="hero-media">
+      <img src="{{ "images/avatar.png" | relURL }}" alt="DROBE avatar — your digital body replica" class="hero-layer hero-avatar" id="hero-avatar">
+      <img src="{{ "images/avatar-animated.gif" | relURL }}" alt="" class="hero-layer hero-gif is-visible" id="hero-gif" aria-hidden="true">
+    </div>
+
+    <div class="hero-content">
+      <ul class="features">
+        <li class="feature">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </span>
+          <span class="feature-text"><strong>Photograph your wardrobe</strong><span>Scan items with your camera — no typing needed.</span></span>
+        </li>
+        <li class="feature">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.73V8l7 5H4l7-5V6.73A2 2 0 0 1 12 3z"/><path d="M3 13h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7z"/></svg>
+          </span>
+          <span class="feature-text"><strong>Build your digital closet</strong><span>Every piece, organised and always with you.</span></span>
+        </li>
+        <li class="feature">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/></svg>
+          </span>
+          <span class="feature-text"><strong>AI outfit suggestions</strong><span>Smart picks based on your style and the weather.</span></span>
+        </li>
+        <li class="feature">
+          <span class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </span>
+          <span class="feature-text"><strong>Plan ahead for events</strong><span>Never stress about what to wear again.</span></span>
+        </li>
+      </ul>
+
+      <div class="chips">
+        <span class="chip chip-green">4D avatar</span>
+        <span class="chip chip-green">Virtual closet</span>
+        <span class="chip">AI stylist</span>
+        <span class="chip">Marketplace</span>
+      </div>
+
+      <p class="tagline">{{ .Site.Params.tagline }}</p>
+    </div>
+  </section>
+</main>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/hero.js" | relURL }}" defer></script>
+<script src="{{ "js/nav.js" | relURL }}" defer></script>
+{{ end }}

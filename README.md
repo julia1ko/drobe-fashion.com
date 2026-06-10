@@ -49,13 +49,25 @@ To enable the custom domain, add a DNS record pointing to GitHub Pages (see [Git
 
 ---
 
+## Site structure
+
+| Page | URL | Content |
+|------|-----|---------|
+| Home | `/` | Cinematic landing page |
+| Product | `/product/` | Interactive demo with animated avatar |
+| Features | `/features/` | Full virtual closet & marketplace features |
+| Compare | `/compare/` | Competitor feature matrix |
+| Business | `/business/` | Freemium, premium, marketplace model |
+| Roadmap | `/roadmap/` | MVP → V2 → V3 timeline & tech stack |
+
 ## Repository layout
 
 ```
 drobe-fashion.com/
-  content/          Hugo content (homepage)
-  layouts/          HTML templates
-  static/           CSS, images, CNAME
+  content/          Page content (one section per page)
+  data/             Features, competitors, roadmap, business model
+  layouts/          HTML templates and partials
+  static/           CSS, JS, images, CNAME
   hugo.toml         Site configuration
   .github/workflows/pages.yml   CI/CD
 ```

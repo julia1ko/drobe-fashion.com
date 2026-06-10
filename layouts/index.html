@@ -1,89 +1,151 @@
+{{ define "bodyclass" }}home{{ end }}
+{{ define "head" }}<link rel="stylesheet" href="{{ "css/home.css" | relURL }}">{{ end }}
+
 {{ define "main" }}
-<main class="page">
-  <section class="hero">
-    <div class="hero-media" id="hero-media">
-      <img
-        src="{{ "images/avatar.png" | relURL }}"
-        alt="DROBE avatar — your digital body replica"
-        class="hero-layer hero-avatar"
-        id="hero-avatar"
-      >
-      <img
-        src="{{ "images/avatar-animated.gif" | relURL }}"
-        alt=""
-        class="hero-layer hero-gif is-visible"
-        id="hero-gif"
-        aria-hidden="true"
-      >
+<main>
+  <!-- Cinematic hero -->
+  <section class="cine-hero">
+    <div class="cine-hero-bg">
+      <div class="img-placeholder cine-hero-placeholder" aria-label="Hero image placeholder">
+        <span>Campaign visual</span>
+      </div>
+      <div class="cine-hero-overlay"></div>
     </div>
-
-    <div class="hero-content">
-      <div class="logo">
-        <span class="logo-mark" aria-hidden="true"></span>
-        <span class="logo-text">DROBE</span>
+    <div class="cine-hero-content">
+      <p class="cine-eyebrow">Multi-platform · Digital wardrobe · 4D avatar · AI styling</p>
+      <h1 class="cine-title">DROBE</h1>
+      <p class="cine-tagline">{{ .Site.Params.tagline }}</p>
+      <p class="cine-sub">Your wardrobe, reimagined on a body that is unmistakably yours.</p>
+      <div class="cine-cta">
+        <a href="{{ "product/" | relURL }}" class="btn btn-primary">Explore the product</a>
+        <a href="{{ "features/" | relURL }}" class="btn btn-ghost">See all features</a>
       </div>
+    </div>
+    <div class="cine-scroll" aria-hidden="true"><span>Scroll</span></div>
+  </section>
 
-      <h1>Your wardrobe,<br>reimagined.</h1>
-
-      <p class="lead">
-        A 4D digital avatar of your body. Every item you own in a virtual closet.
-        AI styling, event planning, and a marketplace — so you always know what to wear.
-      </p>
-
-      <ul class="features">
-        <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          </span>
-          <span class="feature-text">
-            <strong>Photograph your wardrobe</strong>
-            <span>Scan items with your camera — no typing needed.</span>
-          </span>
-        </li>
-        <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.73V8l7 5H4l7-5V6.73A2 2 0 0 1 12 3z"/><path d="M3 13h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7z"/></svg>
-          </span>
-          <span class="feature-text">
-            <strong>Build your digital closet</strong>
-            <span>Every piece, organised and always with you.</span>
-          </span>
-        </li>
-        <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"/></svg>
-          </span>
-          <span class="feature-text">
-            <strong>AI outfit suggestions</strong>
-            <span>Smart picks based on your style and the weather.</span>
-          </span>
-        </li>
-        <li class="feature">
-          <span class="feature-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6z"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          </span>
-          <span class="feature-text">
-            <strong>Plan ahead for events</strong>
-            <span>Never stress about what to wear again.</span>
-          </span>
-        </li>
-      </ul>
-
-      <div class="chips">
-        <span class="chip chip-green">4D avatar</span>
-        <span class="chip chip-green">Virtual closet</span>
-        <span class="chip">AI stylist</span>
-        <span class="chip">Marketplace</span>
+  <!-- Concept -->
+  <section class="cine-section cine-concept">
+    <div class="cine-section-inner">
+      <p class="section-label">The concept</p>
+      <h2>Your body. Your closet. Your rules.</h2>
+      <div class="concept-grid">
+        <div class="concept-copy">
+          <p>Most people own more clothes than they will ever wear — and every morning the same question returns: <em>what should I wear?</em> The problem is not the clothes. It is that we cannot see them, remember them, or imagine them on our bodies.</p>
+          <p>DROBE solves this with one core innovation: <strong>a 4D digital avatar that is an exact replica of your body</strong>. Every item you own lives in a virtual closet — digitised, organised, and always accessible. See your entire wardrobe on your avatar at once. Build outfits from what you actually own. When you need help, an AI stylist knows your body, your closet, and your taste.</p>
+          <p>When something no longer serves you, sell, trade, and discover independent makers — giving every garment a longer life.</p>
+          <p class="concept-closer">Not about buying more. About finally knowing what you have — and always knowing what to wear.</p>
+        </div>
+        <div class="img-placeholder concept-visual" aria-label="Concept image placeholder">
+          <span>Editorial fashion visual</span>
+        </div>
       </div>
-
-      <p class="tagline">{{ .Site.Params.tagline }}</p>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>Not about buying more. About knowing what you have, and always knowing what to wear.</p>
-    <p class="footer-meta">&copy; {{ now.Year }} DROBE</p>
-  </footer>
+  <!-- App screens -->
+  <section class="cine-section cine-screens">
+    <div class="cine-section-inner">
+      <p class="section-label">The experience</p>
+      <h2>Four screens. One wardrobe.</h2>
+      <p class="section-lead">From first launch to daily styling — designed for phone, tablet, and desktop.</p>
+      <div class="screen-grid">
+        {{ range (slice "Welcome" "Home" "Closet" "Events") }}
+        <div class="screen-card">
+          <div class="img-placeholder screen-placeholder" aria-label="{{ . }} screen placeholder">
+            <span>{{ . }}</span>
+          </div>
+          <p class="screen-label">{{ . }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars -->
+  <section class="cine-section cine-pillars">
+    <div class="cine-section-inner">
+      <p class="section-label">Why DROBE</p>
+      <h2>Everything your wardrobe needs.</h2>
+      <div class="pillar-grid">
+        <article class="pillar-card">
+          <div class="pillar-icon">01</div>
+          <h3>4D Avatar</h3>
+          <p>An exact digital replica of your body — proportions, skin tone, and shape. The foundation every feature builds on.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon">02</div>
+          <h3>Virtual Closet</h3>
+          <p>Every piece photographed, categorised, and organised. Scan new items in seconds. Nothing forgotten.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon">03</div>
+          <h3>AI Stylist</h3>
+          <p>Personal outfit suggestions for your day, event, or mood — only when you ask. Always available, never judging.</p>
+        </article>
+        <article class="pillar-card">
+          <div class="pillar-icon">04</div>
+          <h3>Marketplace</h3>
+          <p>Sell, trade, and try on pieces from peers and independent makers — on your avatar, before you commit.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison teaser -->
+  <section class="cine-section cine-compare-teaser">
+    <div class="cine-section-inner cine-compare-inner">
+      <div>
+        <p class="section-label">Competitive edge</p>
+        <h2>The only product that does it all.</h2>
+        <p class="section-lead">Every competitor does one or two things well. Nobody has built the full vision — until now.</p>
+        <a href="{{ "compare/" | relURL }}" class="btn btn-primary">View full comparison</a>
+      </div>
+      <div class="teaser-stats">
+        <div class="teaser-stat"><strong>9</strong><span>feature categories</span></div>
+        <div class="teaser-stat"><strong>4</strong><span>competitors compared</span></div>
+        <div class="teaser-stat highlight"><strong>9/9</strong><span>DROBE coverage</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap teaser -->
+  <section class="cine-section cine-roadmap-teaser">
+    <div class="cine-section-inner">
+      <p class="section-label">Roadmap</p>
+      <h2>From MVP to full ecosystem.</h2>
+      <div class="roadmap-preview">
+        {{ range site.Data.roadmap.phases }}
+        <article class="roadmap-preview-card">
+          <span class="roadmap-symbol">{{ .symbol }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .subtitle }}</p>
+        </article>
+        {{ end }}
+      </div>
+      <a href="{{ "roadmap/" | relURL }}" class="btn btn-ghost">See full roadmap</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cine-section cine-final-cta">
+    <div class="cine-section-inner cine-final-inner">
+      <div class="img-placeholder cine-cta-visual" aria-label="Brand visual placeholder">
+        <span>Brand campaign</span>
+      </div>
+      <div>
+        <h2>Ready to see it in action?</h2>
+        <p>Explore the interactive product demo and the full feature breakdown.</p>
+        <div class="cine-cta">
+          <a href="{{ "product/" | relURL }}" class="btn btn-primary">View product</a>
+          <a href="https://github.com/julia1ko/drobe-demo" class="btn btn-ghost" target="_blank" rel="noopener">Try the demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<script src="{{ "js/hero.js" | relURL }}" defer></script>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/nav.js" | relURL }}" defer></script>
 {{ end }}
