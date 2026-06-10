@@ -44,7 +44,7 @@
 }
 
 .cine-eyebrow {
-  font-size: 11px;
+  font-size: clamp(11px, 0.85vw, 17px);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -62,7 +62,7 @@
 }
 
 .cine-tagline {
-  font-size: clamp(13px, 2.2vw, 17px);
+  font-size: clamp(13px, 1.1vw, 21px);
   font-weight: 600;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -71,9 +71,9 @@
 }
 
 .cine-sub {
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(16px, 1.3vw, 25px);
   color: rgba(255, 255, 255, 0.78);
-  max-width: 520px;
+  max-width: 26em;
   line-height: 1.6;
   margin-bottom: 32px;
 }
@@ -124,7 +124,7 @@
 }
 
 .cine-section h2 {
-  font-size: clamp(26px, 4vw, 38px);
+  font-size: clamp(28px, 3vw, 48px);
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 16px;
@@ -132,9 +132,9 @@
 }
 
 .section-lead {
-  font-size: 16px;
+  font-size: clamp(16px, 1.05vw, 21px);
   color: var(--text-sec);
-  max-width: 560px;
+  max-width: 34em;
   margin-bottom: 40px;
   line-height: 1.7;
 }
@@ -149,7 +149,7 @@
 }
 
 .concept-copy p {
-  font-size: 15px;
+  font-size: clamp(15px, 1vw, 19px);
   color: var(--text-sec);
   margin-bottom: 16px;
   line-height: 1.75;
@@ -208,7 +208,7 @@
 }
 
 .story-step {
-  font-size: 11px;
+  font-size: clamp(11px, 0.75vw, 14px);
   font-weight: 700;
   letter-spacing: 2px;
   color: var(--sage-bg);
@@ -217,13 +217,13 @@
 }
 
 .story-card h3 {
-  font-size: 16px;
+  font-size: clamp(16px, 1.05vw, 20px);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .story-card p {
-  font-size: 13px;
+  font-size: clamp(13px, 0.9vw, 17px);
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
 }
@@ -245,14 +245,14 @@
 }
 
 .screen-label {
-  font-size: 14px;
+  font-size: clamp(14px, 0.95vw, 18px);
   font-weight: 700;
   color: var(--text);
   margin: 14px 0 6px;
 }
 
 .screen-desc {
-  font-size: 12px;
+  font-size: clamp(12px, 0.85vw, 16px);
   color: var(--text-muted);
   line-height: 1.5;
   max-width: 220px;
@@ -270,9 +270,19 @@
   background: var(--bg);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 28px 22px;
   height: 100%;
   transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.pillar-visual {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pillar-body {
+  padding: 24px 22px 28px;
 }
 
 .cine-pillars .pillar-card { background: var(--surface); }
@@ -295,15 +305,39 @@
 }
 
 .pillar-card h3 {
-  font-size: 16px;
+  font-size: clamp(16px, 1.05vw, 20px);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .pillar-card p {
-  font-size: 13px;
+  font-size: clamp(13px, 0.9vw, 17px);
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* Community */
+.community-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.community-inner .section-lead {
+  margin-bottom: 0;
+}
+
+.community-visual-wrap {
+  margin: 0;
+}
+
+.community-visual {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  display: block;
 }
 
 /* Compare teaser */
@@ -333,14 +367,14 @@
 .cine-compare-teaser .teaser-stat { background: var(--surface); }
 
 .teaser-stat strong {
-  font-size: 30px;
+  font-size: clamp(30px, 2.2vw, 42px);
   font-weight: 700;
   color: var(--text);
   line-height: 1;
 }
 
 .teaser-stat span {
-  font-size: 13px;
+  font-size: clamp(13px, 0.9vw, 16px);
   color: var(--text-muted);
 }
 
@@ -377,13 +411,13 @@
 }
 
 .roadmap-preview-card h3 {
-  font-size: 15px;
+  font-size: clamp(15px, 1vw, 19px);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .roadmap-preview-card p {
-  font-size: 13px;
+  font-size: clamp(13px, 0.9vw, 16px);
   color: var(--text-muted);
   line-height: 1.5;
 }
@@ -419,6 +453,7 @@
 }
 
 .cine-final-cta p {
+  font-size: clamp(15px, 1vw, 19px);
   color: rgba(255, 255, 255, 0.65);
   margin-bottom: 28px;
   line-height: 1.7;
@@ -441,6 +476,7 @@
 
   .roadmap-preview { grid-template-columns: 1fr; }
   .story-grid { grid-template-columns: 1fr; }
+  .community-inner { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {

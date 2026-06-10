@@ -43,7 +43,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo-text {
-  font-size: 13px;
+  font-size: clamp(13px, 0.85vw, 16px);
   font-weight: 700;
   letter-spacing: 2.5px;
   color: var(--text);
@@ -84,7 +84,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-link {
-  font-size: 13px;
+  font-size: clamp(13px, 0.85vw, 16px);
   font-weight: 500;
   color: var(--text-sec);
   padding: 8px 12px;
@@ -163,10 +163,10 @@ body.inner main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 13px;
+  font-size: clamp(13px, 0.9vw, 17px);
   font-weight: 600;
   letter-spacing: 0.3px;
-  padding: 12px 24px;
+  padding: clamp(12px, 0.9vw, 16px) clamp(24px, 1.7vw, 34px);
   border-radius: 99px;
   border: 1px solid transparent;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
@@ -251,7 +251,7 @@ body.inner main {
 
 /* ── Section typography ──────────────────────────────────────── */
 .section-label {
-  font-size: 11px;
+  font-size: clamp(11px, 0.75vw, 14px);
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -284,7 +284,7 @@ body.inner main {
 .footer-brand .logo-mark { background: var(--sage); }
 
 .footer-tagline {
-  font-size: 12px;
+  font-size: clamp(12px, 0.8vw, 14px);
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--sage-bg);
@@ -299,7 +299,7 @@ body.inner main {
 }
 
 .footer-nav a {
-  font-size: 13px;
+  font-size: clamp(13px, 0.85vw, 16px);
   color: rgba(255, 255, 255, 0.6);
   transition: color 0.15s;
 }
@@ -307,7 +307,7 @@ body.inner main {
 .footer-nav a:hover { color: #fff; }
 
 .footer-copy {
-  font-size: 14px;
+  font-size: clamp(14px, 0.95vw, 17px);
   max-width: 480px;
   margin: 0 auto 12px;
   line-height: 1.6;
@@ -344,4 +344,9 @@ body.inner main {
   .nav-links.is-open { display: flex; }
 
   .nav-link { width: 100%; text-align: left; }
+}
+
+/* ── Large screens ───────────────────────────────────────────── */
+@media (min-width: 1700px) {
+  :root { --content-max: 1320px; }
 }
