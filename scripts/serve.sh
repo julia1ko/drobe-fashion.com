@@ -26,4 +26,4 @@ if [[ ! -x "$HUGO_BIN" ]]; then
 fi
 
 cd "$ROOT"
-exec "$HUGO_BIN" server -D "$@"
+exec "$HUGO_BIN" server -D --baseURL "http://localhost:1313/" "$@"

@@ -1,4 +1,5 @@
-baseURL = "https://drobe-fashion.com/"
+# Local dev default; CI overrides via configure-pages (github.io now, custom domain later)
+baseURL = "https://julia1ko.github.io/drobe-fashion.com/"
 languageCode = "en-us"
 title = "DROBE"
 theme = []

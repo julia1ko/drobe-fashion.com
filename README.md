@@ -42,12 +42,10 @@ If you already have Hugo installed globally, you can also run `hugo server -D` d
 
 GitHub Actions builds and deploys the site on every push to `main` (see `.github/workflows/pages.yml`).
 
-To enable GitHub Pages (required once before the first deploy succeeds):
+- **Live site (now):** [julia1ko.github.io/drobe-fashion.com](https://julia1ko.github.io/drobe-fashion.com/)
+- **Custom domain (later):** `drobe-fashion.com` — the workflow reads the correct `baseURL` from GitHub Pages automatically, so asset paths update when the custom domain is enabled. The `static/CNAME` file is already in place.
 
-1. Open [Settings → Pages](https://github.com/julia1ko/drobe-fashion.com/settings/pages) in the GitHub repo
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. Re-run the failed workflow (or push again) — deploy will complete automatically after that
-4. For the custom domain `drobe-fashion.com`, add a DNS record pointing to GitHub Pages (see [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site))
+To enable the custom domain, add a DNS record pointing to GitHub Pages (see [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)), then set it under **Settings → Pages → Custom domain**.
 
 ---
 

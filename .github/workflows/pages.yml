@@ -23,13 +23,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.139.4
-      # Matches static/CNAME and hugo.toml — no configure-pages step needed
-      HUGO_BASEURL: https://drobe-fashion.com/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Install Hugo CLI
         run: |
@@ -46,7 +48,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${HUGO_BASEURL}"
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
