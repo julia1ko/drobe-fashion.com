@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The public marketing site for DROBE (a virtual-wardrobe app built around a 4D body avatar). Static site built with Hugo (no theme — all layouts are custom), deployed to GitHub Pages on every push to `main`.
+The public marketing site for DROBE (a virtual-wardrobe app built around a 3D body avatar). Static site built with Hugo (no theme — all layouts are custom), deployed to GitHub Pages on every push to `main`.
 
 ## Commands
 

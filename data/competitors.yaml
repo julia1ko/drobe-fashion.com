@@ -14,7 +14,7 @@ competitors:
     highlight: true
 
 features:
-  - label: 4D avatar from your own body
+  - label: 3D avatar from your own body
     values: [partial, partial, "no", "no", "yes"]
   - label: Your real closet digitised
     values: ["yes", "yes", "yes", "no", "yes"]

@@ -5,7 +5,7 @@ sections:
       - name: Avatar
         icon: user
         screenshot: images/screenshots/welcome-phone.png
-        summary: "A 4D digital replica of your exact body: proportions, skin tone, and shape."
+        summary: "A 3D digital replica of your exact body: proportions, skin tone, and shape."
         items:
           - "Generated from your own photos or manual measurements in minutes"
           - "Updated anytime your body changes, so fits always look right"

@@ -6,7 +6,7 @@ theme = []
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Your body. Your closet. Your rules. A virtual wardrobe built around a 4D digital avatar of your body."
+  description = "Your body. Your closet. Your rules. A virtual wardrobe built around a 3D digital avatar of your body."
   tagline = "Your body. Your closet. Your rules."
 
 [[menu.main]]

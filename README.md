@@ -2,7 +2,7 @@
 
 **Your body. Your closet. Your rules.**
 
-The public website for [DROBE](https://drobe-fashion.com) — a virtual wardrobe built around a 4D digital avatar of your body.
+The public website for [DROBE](https://drobe-fashion.com) — a virtual wardrobe built around a 3D digital avatar of your body.
 
 Built with [Hugo](https://gohugo.io/) and deployed automatically to GitHub Pages on every push to `main`.
 
@@ -12,7 +12,7 @@ Built with [Hugo](https://gohugo.io/) and deployed automatically to GitHub Pages
 
 Most people own more clothes than they will ever wear, yet every morning the question is the same: what do I wear? The problem is not the clothes. It is that we cannot see them, remember them, or imagine them on our bodies.
 
-DROBE solves this with one core innovation: a 4D digital avatar that is an exact replica of your body. From there, every item you own lives in a virtual closet — digitalized, organised, and always accessible.
+DROBE solves this with one core innovation: a 3D digital avatar that is an exact replica of your body. From there, every item you own lives in a virtual closet — digitalized, organised, and always accessible.
 
 Not about buying more. About finally knowing what you have, and always knowing what to wear.
 
