@@ -1,7 +1,9 @@
+# Note: yes/no must stay quoted — unquoted they parse as YAML booleans
+# and break the string comparisons in layouts/compare/list.html.
 legend:
-  yes: "Available"
+  "yes": "Available"
   partial: "Partial"
-  no: "Not available"
+  "no": "Not available"
 
 competitors:
   - name: Aesty
@@ -13,20 +15,20 @@ competitors:
 
 features:
   - label: 4D avatar from your own body
-    values: [partial, partial, no, no, yes]
+    values: [partial, partial, "no", "no", "yes"]
   - label: Your real closet digitised
-    values: [yes, yes, yes, no, yes]
+    values: ["yes", "yes", "yes", "no", "yes"]
   - label: AI stylist
-    values: [yes, yes, partial, no, yes]
+    values: ["yes", "yes", partial, "no", "yes"]
   - label: Event & calendar planning
-    values: [partial, yes, no, no, yes]
+    values: [partial, "yes", "no", "no", "yes"]
   - label: Try on shop items on your avatar
-    values: [no, no, no, no, yes]
+    values: ["no", "no", "no", "no", "yes"]
   - label: External retailer try-on
-    values: [no, no, no, no, yes]
+    values: ["no", "no", "no", "no", "yes"]
   - label: Peer-to-peer trade
-    values: [no, no, no, partial, yes]
+    values: ["no", "no", "no", partial, "yes"]
   - label: Independent maker space
-    values: [no, no, no, partial, yes]
+    values: ["no", "no", "no", partial, "yes"]
   - label: Sustainability tracker
-    values: [no, no, partial, no, yes]
+    values: ["no", "no", partial, "no", "yes"]
