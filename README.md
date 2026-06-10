@@ -20,25 +20,21 @@ Not about buying more. About finally knowing what you have, and always knowing w
 
 ## Local development
 
-Install Hugo (macOS):
+No Homebrew required. The repo includes scripts that download Hugo automatically on first run:
 
 ```bash
-brew install hugo
-```
-
-Run the site locally:
-
-```bash
-hugo server -D
+./scripts/serve.sh
 # Opens at http://localhost:1313
 ```
 
 Build for production:
 
 ```bash
-hugo --minify
+./scripts/build.sh
 # Output in public/
 ```
+
+If you already have Hugo installed globally, you can also run `hugo server -D` directly.
 
 ---
 
@@ -46,11 +42,12 @@ hugo --minify
 
 GitHub Actions builds and deploys the site on every push to `main` (see `.github/workflows/pages.yml`).
 
-To enable GitHub Pages:
+To enable GitHub Pages (required once before the first deploy succeeds):
 
-1. Go to **Settings → Pages** in the GitHub repo
-2. Set **Source** to **GitHub Actions**
-3. For the custom domain `drobe-fashion.com`, add a DNS record pointing to GitHub Pages (see [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site))
+1. Open [Settings → Pages](https://github.com/julia1ko/drobe-fashion.com/settings/pages) in the GitHub repo
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Re-run the failed workflow (or push again) — deploy will complete automatically after that
+4. For the custom domain `drobe-fashion.com`, add a DNS record pointing to GitHub Pages (see [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site))
 
 ---
 

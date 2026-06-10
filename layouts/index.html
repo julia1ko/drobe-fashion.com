@@ -1,8 +1,20 @@
 {{ define "main" }}
 <main class="page">
   <section class="hero">
-    <div class="hero-media">
-      <img src="{{ "images/avatar.png" | relURL }}" alt="DROBE avatar — your digital body replica" class="hero-image">
+    <div class="hero-media" id="hero-media">
+      <img
+        src="{{ "images/avatar.png" | relURL }}"
+        alt="DROBE avatar — your digital body replica"
+        class="hero-layer hero-avatar"
+        id="hero-avatar"
+      >
+      <img
+        src="{{ "images/avatar-animated.gif" | relURL }}"
+        alt=""
+        class="hero-layer hero-gif is-visible"
+        id="hero-gif"
+        aria-hidden="true"
+      >
     </div>
 
     <div class="hero-content">
@@ -73,4 +85,5 @@
     <p class="footer-meta">&copy; {{ now.Year }} DROBE</p>
   </footer>
 </main>
+<script src="{{ "js/hero.js" | relURL }}" defer></script>
 {{ end }}
