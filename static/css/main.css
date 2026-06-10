@@ -194,6 +194,18 @@ body.inner main {
 
 .btn-ghost:hover { opacity: 1; }
 
+/* ── Waitlist embed (Kajabi form) ────────────────────────────── */
+.waitlist-embed {
+  margin-top: 24px;
+  max-width: 440px;
+}
+
+/* The surrounding section already provides the heading and copy */
+.waitlist-embed .kajabi-form__title,
+.waitlist-embed .kajabi-form__subtitle {
+  display: none;
+}
+
 /* ── Icons ───────────────────────────────────────────────────── */
 .icon {
   display: block;
