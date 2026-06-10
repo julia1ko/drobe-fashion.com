@@ -1,0 +1,229 @@
+/* DROBE brand tokens — matches drobe-demo docs/index.html */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --sage:         #7a8c78;
+  --sage-bg:      #e2eedc;
+  --sage-light:   #eef5ea;
+  --bg:           #F6F9F5;
+  --surface:      #FFFFFF;
+  --text:         #1a1e18;
+  --text-sec:     #4a5248;
+  --text-muted:   #8a9488;
+  --border:       #d8e4d4;
+  --border-light: #eaf0e7;
+  --radius:       10px;
+  --content-max:  1100px;
+}
+
+html { scroll-behavior: smooth; font-size: 15px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 32px 64px;
+}
+
+/* ── Hero layout ─────────────────────────────────────────────── */
+.hero {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.hero-media {
+  flex: 5;
+  background: var(--sage-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-content {
+  flex: 6;
+  padding-top: 16px;
+}
+
+/* ── Logo ────────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo-mark {
+  width: 16px;
+  height: 16px;
+  background: var(--sage);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--text);
+}
+
+/* ── Typography ──────────────────────────────────────────────── */
+h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.lead {
+  font-size: 16px;
+  color: var(--text-sec);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.tagline {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--sage);
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+/* ── Features ────────────────────────────────────────────────── */
+.features {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.feature:last-child { border-bottom: none; }
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sage-light);
+  border-radius: var(--radius);
+  color: var(--sage);
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.feature-text strong {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.feature-text span {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Chips ───────────────────────────────────────────────────── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: var(--surface);
+  color: var(--text-sec);
+  border: 1px solid var(--border);
+}
+
+.chip-green {
+  background: var(--sage-bg);
+  color: var(--sage);
+  border-color: var(--sage-bg);
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.footer {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.footer-meta {
+  font-size: 12px;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .page {
+    padding: 0 0 48px;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-media {
+    width: 100%;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    aspect-ratio: auto;
+    height: 420px;
+  }
+
+  .hero-content {
+    padding: 24px 20px 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}

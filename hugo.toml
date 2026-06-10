@@ -1,0 +1,13 @@
+baseURL = "https://drobe-fashion.com/"
+languageCode = "en-us"
+title = "DROBE"
+theme = []
+
+[params]
+  description = "Your body. Your closet. Your rules. A virtual wardrobe built around a 4D digital avatar of your body."
+  tagline = "Your body. Your closet. Your rules."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
