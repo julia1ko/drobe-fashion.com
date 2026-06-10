@@ -12,9 +12,12 @@
   <div class="business-grid">
     {{ range site.Data.business.models }}
     <article class="business-card">
-      <div class="business-icon">{{ partial "icon.html" (dict "name" .icon "size" 28) }}</div>
-      <h2>{{ .title }}</h2>
-      <p>{{ .description }}</p>
+      {{ if .image }}<img src="{{ .image | relURL }}" alt="{{ .imageAlt }}" class="business-visual" loading="lazy">{{ end }}
+      <div class="business-card-body">
+        <div class="business-icon">{{ partial "icon.html" (dict "name" .icon "size" 28) }}</div>
+        <h2>{{ .title }}</h2>
+        <p>{{ .description }}</p>
+      </div>
     </article>
     {{ end }}
   </div>

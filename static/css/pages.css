@@ -197,10 +197,23 @@
   background: var(--surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
+}
+
+.business-visual {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.business-card-body {
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .business-icon {

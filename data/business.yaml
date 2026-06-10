@@ -1,10 +1,16 @@
 models:
   - title: "Freemium: Ad Supported"
     icon: gift
+    image: images/brand/core-pearl.png
+    imageAlt: "A luminous pearl resting above shattered glass"
     description: "The core product is free. Users access the wardrobe, avatar, and outfit builder at no cost, supported by in-app advertising and a cap on wardrobe items. This ensures the widest possible user base from day one, driving growth and marketplace volume."
   - title: "Premium: under €5/month"
     icon: star
+    image: images/brand/premium-gem.png
+    imageAlt: "A glowing gem on a dark pedestal"
     description: "A low-friction upgrade that removes advertising, unlocks unlimited wardrobe items, and provides full access to the AI Stylist. Priced deliberately below the market average to convert users early and retain them long term."
   - title: "Marketplace Commission: 10-15%"
     icon: percent
+    image: images/brand/garment-exchange.png
+    imageAlt: "Two figures passing a jacket across a flowing ribbon"
     description: "Every completed sale or trade within the app generates a commission, processed automatically via Stripe Connect. As the user base grows, so does transaction volume: a revenue stream that scales without additional cost or operational complexity."
